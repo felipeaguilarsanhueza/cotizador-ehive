@@ -1,0 +1,121 @@
+"id","brand","model","battery","type","year","performance","autonomy"
+13,BMW,"740e iPerformance 2,0 Lts. Sedán 4P. T/A Híbrido",11,Híbrido,2000,7.9,93.0
+14,BMW,"740le iPerformance 2,0 Lts. Sedán 4P. T/A Híbrido",11,Híbrido,2000,7.9,93.0
+15,BMW,"745e Sedán",12,Híbrido,2000,5.7,68.0
+16,BMW,"745Le Sedán",12,Híbrido,2000,5.7,68.0
+17,BMW,i3 120Ah,42,Eléctrico,2000,7.3,309.0
+18,BMW,i3 94Ah Hatchback 5P. T/A Motor Eléctrico,32,Eléctrico,2000,7.6,250.0
+19,BMW,I3s 120Ah,42,Eléctrico,2000,7.3,309.0
+20,BMW,"I8 1,5 Lts. Coupé 3P. T/A 4x4 Híbrido",11,Híbrido,2000,16.6,193.0
+21,BMW,"I8 1,5 Lts. Roadster 3P. T/A 4x4 Híbrido",11,Híbrido,2000,16.6,193.0
+22,BMW,"i8 PHEV 1,5 Lts. DOHC Coupé 2P. T/A Motor Otto, Vehículo Híbrido Eléctrico",7,Híbrido,2000,8.4,60.0
+23,BMW,iX xDrive40,232,Eléctrico,2000,5.2,1206.0
+24,BMW,iX3 M Station Wagon,80,Eléctrico,2000,4.9,392.0
+25,BMW,X3 xDrive30e,12,Híbrido,2000,5.5,66.0
+26,BMW,"X5 xDrive40e iPerformance 2,0 Lts. Station Wagon 5P. T/A Híbrido 4x4",9,Híbrido,2000,6.5,60.0
+27,BMW,X5 xDrive45e,24,Híbrido,2000,3.9,94.0
+28,BYD,BYD D1,53,Eléctrico,2000,7.0,375.0
+29,BYD,BYD M3,50,Eléctrico,2000,4.6,231.0
+30,BYD,BYD T3,50,Eléctrico,2000,4.6,231.0
+31,BYD,BYD Tang EV,82,Eléctrico,2000,5.6,464.0
+32,BYD,BYD Tang EV STE,82,Eléctrico,2000,5.6,464.0
+33,BYD,e5 Sedán 4P. T/A Motor Eléctrico,60,Eléctrico,2000,5.4,327.0
+34,BYD,TANG EV,86,Eléctrico,2000,4.2,363.0
+35,Citroen,Berlingo Furgón 2P. T/A Motor Eléctrico,22,Eléctrico,2000,5.8,131.0
+3,BMW,"330e Sedán",12,Híbrido,2000,5.73,60.0
+4,BMW,"530e iPerformance 2,0 Lts. Sedán 4P. T/A Híbrido",12,Híbrido,2000,4.42,53.0
+5,BMW,"530e Sedán",12,Híbrido,2000,4.58,53.0
+6,Chevrolet,Bolt EV,60,Eléctrico,2000,6.95,417.0
+8,Kia,Soul Electrico (SK3 EV),64,Eléctrico,2000,5.78,370.0
+9,M. Benz,"C 350e 2,0 Lts. Sedán 4P. T/A Híbrid",9,Híbrido,2000,5.0,31.0
+10,Mitsubishi,Outlander PHEV,12,Híbrido,2000,5.71,48.0
+11,Nissan,LEAF (ZE1) AT 4x2,40,Eléctrico,2000,7.7,285.0
+12,Maxus,eDeliver 3,50,Eléctrico,2022,6.84,342.0
+36,DFLM,S50EV,56,Eléctrico,2000,5.1,290.0
+37,DFLM,S50EVE,56,Eléctrico,2000,5.1,290.0
+38,DFSK,Seres E3,53,Eléctrico,2000,4.4,233.0
+39,DS,DS3 Crossback Electrico,50,Eléctrico,2000,5.7,285.0
+40,DS,DS7 Crossback 1.6 THP 4x4 Automático Híbrido,13,Híbrido,2000,-4.8,-63.0
+41,Ferrari,SF90 Spider,7,Híbrido,2000,10.8,85.0
+42,Ferrari,SF90 Stradale Coupe,7,Híbrido,2000,10.8,85.0
+43,Hyundai,Ioniq AE PE,38,Eléctrico,2000,5.3,206.0
+44,Hyundai,Kona OS EV SUV T/A Motor Electrico,39,Eléctrico,2000,6.1,239.0
+45,Jac,e-S2 TA,40,Eléctrico,2000,5.3,212.0
+46,Jaguar,I-PACE EV400 HSE,90,Eléctrico,2000,4.3,387.0
+47,JMC,Touring EV,60,Eléctrico,2000,3.5,211.0
+48,JMC,Vigus EV,60,Eléctrico,2000,3.5,211.0
+49,M. Benz,"C 350e 2,0 Lts. Sedán 4P. T/A Híbrido",8,Híbrido,2000,9.1,79.0
+50,M. Benz,C300e,13,Híbrido,2000,7.0,95.0
+51,M. Benz,"E 350e 2,0 Lts. Sedán 4P. T/A Híbrido",8,Híbrido,2000,7.0,61.0
+52,M. Benz,GLC 300e 4Matic,13,Híbrido,2000,5.9,80.0
+53,M. Benz,"GLC 350e 4Matic 2,0 Lts. Station Wagon 5P. T/A 4x4 Híbrido",8,Híbrido,2000,7.0,61.0
+54,M. Benz,"GLE 500e 4 Matic 3,0 Lts. Station Wagon 5P. T/A 4x4 Híbrido",8,Híbrido,2000,5.5,48.0
+55,Maple,Maple 30x,37,Eléctrico,2000,6.3,235.0
+56,Maxus,e Deliver 3 (3800-0002000),35,Eléctrico,2000,4.6,161.0
+57,Maxus,e Deliver 3 L (3810-2002002),35,Eléctrico,2000,4.6,161.0
+58,Maxus,e Deliver 3 L Plus (3810-31020),52,Eléctrico,2000,4.6,242.0
+59,Maxus,e Deliver 3 Plus (3800-1102001),52,Eléctrico,2000,4.6,242.0
+60,Maxus,e Deliver 9 L2H2,88,Eléctrico,2000,2.8,246.0
+61,Maxus,e Deliver 9 L3H2,88,Eléctrico,2000,2.8,246.0
+62,Maxus,EG50 AT EV,52,Eléctrico,2000,4.1,215.0
+63,Maxus,EG50 AT EV 5 Pasajeros,52,Eléctrico,2000,4.1,215.0
+64,Maxus,EV30 (3800-0002000),35,Eléctrico,2000,4.6,161.0
+65,Maxus,EV30 L (3810-2002002),35,Eléctrico,2000,4.6,161.0
+66,Maxus,EV30 L Plus (3810-31020),52,Eléctrico,2000,4.6,242.0
+67,Maxus,EV30 Plus (3800-1102001),52,Eléctrico,2000,4.6,242.0
+68,Maxus,EV80 Cargo,75,Eléctrico,2000,3.1,229.0
+69,Maxus,EV80 Chasis Cabina,75,Eléctrico,2000,3.1,229.0
+70,Maxus,EV80 Minibus (16 Pasajeros),75,Eléctrico,2000,3.1,229.0
+71,Maxus,EV80 Minibus (8 Pasajeros),75,Eléctrico,2000,3.1,229.0
+72,Maxus,EV90 L2H2,88,Eléctrico,2000,2.8,246.0
+73,Maxus,EV90 L3H2,88,Eléctrico,2000,2.8,246.0
+74,MG,MG ZS EV,44,Eléctrico,2000,3.6,160.0
+75,Mini,Cooper SE,93,Eléctrico,2000,5.4,502.0
+76,Mini,Countryman Cooper SE ALL4,10,Híbrido,2000,6.6,66.0
+1,Audi,e-tron,84,Eléctrico,2000,3.7,450.0
+77,Mitsubishi,"Outlander PHEV 2,0 Lts. DOHC Station Wagon 5P. T/A, Vehículo Híbrido Eléctrico",12,Híbrido,2000,7.5,90.0
+78,Peugeot,"3008 1.6 Hybrid 300 4x4",13,Híbrido,2000,5.8,75.0
+79,Peugeot,e-2008 ELECTRIC 5 Puertas T/A,50,Eléctrico,2000,5.4,270.0
+80,Peugeot,Partner Furgón 5P. T/A Motor Eléctrico,22,Eléctrico,2000,6.3,142.0
+81,Peugeot,Tepee Outdoor Electric Station Wagon 6P. Motor Eléctrico,22,Eléctrico,2000,6.3,142.0
+82,Porsche,"918 Spyder 4,6 Lts. DOHC Cabriolet 2P. T/A Vehículo Híbrido Eléctrico",6,Híbrido,2000,7.9,54.0
+83,Porsche,"Cayenne E-Hibrid E3 3,0 Lts. Station Wagon 5P. T/A Híbrido",3,Híbrido,2000,4.7,17.0
+84,Porsche,Cayenne E-Hybrid Coupe E3,17,Híbrido,2000,4.5,81.0
+85,Porsche,"Cayenne S E-Hybrid 3,0 Lts. Station Wagon 4x4 5P. T/A Híbrido Eléctrico ",3,Híbrido,2000,4.8,17.0
+86,Porsche,Cayenne Turbo S E-Hybrid E3,14,Híbrido,2000,5.2,73.0
+87,Porsche,"Panamera 4 E-Hybrid G2 2,9 Lts. Sedán 4P. T/A 4x4 Otto",7,Híbrido,2000,6.3,45.0
+88,Porsche,Panamera 4 E-Hybrid G2 II,3,Híbrido,2000,5.1,18.0
+89,Porsche,"Panamera S E-Hybrid 3,0 Lts. DOHC Sedán 5P. T/A Vehículo Híbrido Eléctrico",9,Híbrido,2000,6.2,58.0
+90,Porsche,"Panamera Turbo S E-Hybrid Sport Turismo 4,0 Lts. Station Wagon 5P. T/A 4x4 Otto",3,Híbrido,2000,5.5,20.0
+91,Porsche,Taycan,83,Eléctrico,2000,1.9,161.0
+92,Porsche,Taycan 4S,83,Eléctrico,2000,3.7,307.0
+93,Porsche,Taycan Turbo,83,Eléctrico,2000,3.8,315.0
+94,Porsche,Taycan Turbo S,83,Eléctrico,2000,3.7,307.0
+95,Renault,Kangoo ZE Furgón 4P. T/A Motor Eléctrico,27,Eléctrico,2000,5.5,149.0
+96,Renault,Kangoo ZE Furgón 5P. T/A Motor Eléctrico,27,Eléctrico,2000,6.5,176.0
+97,Renault,Kangoo ZE Furgón Chasis Largo 5P. T/A Motor Eléctrico,27,Eléctrico,2000,6.5,176.0
+98,Renault,Kangoo ZE Furgón Largo 5P. T/A Motor Eléctrico,27,Eléctrico,2000,5.5,149.0
+99,Renault,Kangoo ZE Station Wagon 5P. T/A Motor Eléctrico,27,Eléctrico,2000,6.5,176.0
+100,Renault,Kangoo ZE Station Wagon Chasis Largo 5P. T/A Motor Eléctrico,27,Eléctrico,2000,6.5,176.0
+101,Renault,Zoe Neo T/A,52,Eléctrico,2000,6.2,322.0
+102,Volvo,S60 T8,8,Híbrido,2000,6.7,54.0
+103,Volvo,"S90 T8 2,0 Lts. Sedán 4P. T/A 4x4 Híbrido",8,Híbrido,2000,7.1,57.0
+104,Volvo,V60 T8,8,Híbrido,2000,6.7,54.0
+105,Volvo,"XC 60 T8 2,0 Lts. Station Wagon 5P. T/A 4x4 Híbrido",8,Híbrido,2000,5.6,45.0
+106,Volvo,XC40 P8 Recharge Twin,32,Eléctrico,2000,4.4,141.0
+107,Volvo,XC40 T5 Hybrid,9,Híbrido,2000,6.2,60.0
+108,Volvo,XC40 T5 Hybrid R-Design,9,Híbrido,2000,6.2,60.0
+109,Volvo,XC60 II T8 AWD Recharge,48,Híbrido,2000,5.2,252.0
+110,Volvo,XC90 II T8,48,Híbrido,2000,5.0,243.0
+111,Volvo,"XC90 T8 AWD 2,0 Lts. Station Wagon 5P. 4 asientos Híbrido T/A 4x4",8,Híbrido,2000,5.5,44.0
+112,Volvo,"XC90 T8 AWD 2,0 Lts. Station Wagon 5P. 7 asientos Híbrido T/A 4x4",8,Híbrido,2000,5.5,44.0
+113,ZNA,Voltera Rich 6 EV,67,Eléctrico,2000,4.1,275.0
+114,ZNA,ZNA Rich 6 EV,67,Eléctrico,2000,4.1,275.0
+2,BMW,"330e Iperformance 2,0 Lts. Sedán 4P. T/A Híbrido",8,Híbrido,2000,5.26,40.0
+7,Hyundai,Ioniq AE Automóvil 4P. T/A Motor Eléctrico,28,Eléctrico,2000,6.04,169.0
+120,Tesla,Model 3 Performance,82,Eléctrico,2025,15.9,547.0
+115,Tesla,Model 3 Standard,54,Eléctrico,2025,14.8,430.0
+116,Tesla,Model Y,82,Eléctrico,2025,16.9,533.0
+117,Tesla,Model S,100,Eléctrico,2025,16.7,637.0
+118,Tesla,Model X,100,Eléctrico,2025,20.5,560.0
+119,Tesla,Cybertruck,120,Eléctrico,2025,21.0,400.0

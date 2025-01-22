@@ -1,0 +1,329 @@
+region,comuna
+Arica y Parinacota,Arica
+Arica y Parinacota,Camarones
+Tarapacá,Iquique
+Tarapacá,Alto Hospicio
+Tarapacá,Pozo Almonte
+Tarapacá,Pica
+Tarapacá,Huara
+Tarapacá,Camiña
+Tarapacá,Colchane
+Antofagasta,Antofagasta
+Antofagasta,Mejillones
+Antofagasta,Sierra Gorda
+Antofagasta,Taltal
+Antofagasta,Calama
+Antofagasta,San Pedro de Atacama
+Antofagasta,María Elena
+Antofagasta,Tocopilla
+Atacama,Copiapó
+Atacama,Caldera
+Atacama,Tierra Amarilla
+Atacama,Chañaral
+Atacama,Diego de Almagro
+Atacama,Vallenar
+Atacama,Huasco
+Atacama,Freirina
+Atacama,Alto del Carmen
+Coquimbo,La Serena
+Coquimbo,Coquimbo
+Coquimbo,Andacollo
+Coquimbo,La Higuera
+Coquimbo,Paihuano
+Coquimbo,Vicuña
+Coquimbo,Ovalle
+Coquimbo,Monte Patria
+Coquimbo,Combarbalá
+Coquimbo,Punitaqui
+Coquimbo,Río Hurtado
+Coquimbo,Illapel
+Coquimbo,Salamanca
+Coquimbo,Los Vilos
+Coquimbo,Canela
+Valparaíso,Valparaíso
+Valparaíso,Viña del Mar
+Valparaíso,Quilpué
+Valparaíso,Villa Alemana
+Valparaíso,Concón
+Valparaíso,Casablanca
+Valparaíso,Quintero
+Valparaíso,Puchuncaví
+Valparaíso,Juan Fernández
+Valparaíso,San Antonio
+Valparaíso,Cartagena
+Valparaíso,El Quisco
+Valparaíso,El Tabo
+Valparaíso,Algarrobo
+Valparaíso,Santo Domingo
+Valparaíso,Quillota
+Valparaíso,La Cruz
+Valparaíso,La Calera
+Valparaíso,Hijuelas
+Valparaíso,Nogales
+Valparaíso,San Felipe
+Valparaíso,Catemu
+Valparaíso,Llay Llay
+Valparaíso,Panquehue
+Valparaíso,Putaendo
+Valparaíso,Santa María
+Valparaíso,Los Andes
+Valparaíso,San Esteban
+Valparaíso,Rinconada
+Valparaíso,Calle Larga
+Valparaíso,Isla de Pascua
+Región Metropolitana,Santiago
+Región Metropolitana,Cerrillos
+Región Metropolitana,Cerro Navia
+Región Metropolitana,Conchalí
+Región Metropolitana,El Bosque
+Región Metropolitana,Estación Central
+Región Metropolitana,Huechuraba
+Región Metropolitana,Independencia
+Región Metropolitana,La Cisterna
+Región Metropolitana,La Florida
+Región Metropolitana,La Granja
+Región Metropolitana,La Pintana
+Región Metropolitana,La Reina
+Región Metropolitana,Las Condes
+Región Metropolitana,Lo Barnechea
+Región Metropolitana,Lo Espejo
+Región Metropolitana,Lo Prado
+Región Metropolitana,Macul
+Región Metropolitana,Maipú
+Región Metropolitana,Ñuñoa
+Región Metropolitana,Pedro Aguirre Cerda
+Región Metropolitana,Peñalolén
+Región Metropolitana,Providencia
+Región Metropolitana,Pudahuel
+Región Metropolitana,Quilicura
+Región Metropolitana,Quinta Normal
+Región Metropolitana,Recoleta
+Región Metropolitana,Renca
+Región Metropolitana,San Joaquín
+Región Metropolitana,San Miguel
+Región Metropolitana,San Ramón
+Región Metropolitana,Vitacura
+Región Metropolitana,Puente Alto
+Región Metropolitana,Pirque
+Región Metropolitana,San José de Maipo
+Región Metropolitana,Colina
+Región Metropolitana,Lampa
+Región Metropolitana,Tiltil
+Región Metropolitana,San Bernardo
+Región Metropolitana,Buin
+Región Metropolitana,Paine
+Región Metropolitana,Calera de Tango
+Región Metropolitana,Melipilla
+Región Metropolitana,Curacaví
+Región Metropolitana,María Pinto
+Región Metropolitana,San Pedro
+Región Metropolitana,Talagante
+Región Metropolitana,El Monte
+Región Metropolitana,Isla de Maipo
+Región Metropolitana,Padre Hurtado
+Región Metropolitana,Peñaflor
+O'Higgins,Rancagua
+O'Higgins,Machalí
+O'Higgins,Graneros
+O'Higgins,Mostazal
+O'Higgins,Codegua
+O'Higgins,Doñihue
+O'Higgins,Coinco
+O'Higgins,Coltauco
+O'Higgins,Olivar
+O'Higgins,Requínoa
+O'Higgins,Rengo
+O'Higgins,Malloa
+O'Higgins,Quinta de Tilcoco
+O'Higgins,San Vicente
+O'Higgins,Pichidegua
+O'Higgins,Peumo
+O'Higgins,Las Cabras
+O'Higgins,San Fernando
+O'Higgins,Chimbarongo
+O'Higgins,Nancagua
+O'Higgins,Santa Cruz
+O'Higgins,Lolol
+O'Higgins,Pumanque
+O'Higgins,Chépica
+O'Higgins,Palmilla
+O'Higgins,Peralillo
+O'Higgins,Pichilemu
+O'Higgins,Marchigüe
+O'Higgins,Litueche
+O'Higgins,La Estrella
+O'Higgins,Navidad
+Maule,Talca
+Maule,Constitución
+Maule,Curepto
+Maule,Empedrado
+Maule,Maule
+Maule,Pelarco
+Maule,Pencahue
+Maule,Río Claro
+Maule,San Clemente
+Maule,San Rafael
+Maule,Cauquenes
+Maule,Chanco
+Maule,Pelluhue
+Maule,Curicó
+Maule,Hualañé
+Maule,Licantén
+Maule,Molina
+Maule,Rauco
+Maule,Romeral
+Maule,Sagrada Familia
+Maule,Teno
+Maule,Vichuquén
+Maule,Linares
+Maule,Colbún
+Maule,Longaví
+Maule,Parral
+Maule,Retiro
+Maule,San Javier
+Maule,Villa Alegre
+Maule,Yerbas Buenas
+Ñuble,Chillán
+Ñuble,Chillán Viejo
+Ñuble,Bulnes
+Ñuble,Cobquecura
+Ñuble,Coelemu
+Ñuble,Coihueco
+Ñuble,El Carmen
+Ñuble,Ninhue
+Ñuble,Ñiquén
+Ñuble,Pemuco
+Ñuble,Pinto
+Ñuble,Portezuelo
+Ñuble,Quillón
+Ñuble,Quirihue
+Ñuble,Ránquil
+Ñuble,San Carlos
+Ñuble,San Fabián
+Ñuble,San Ignacio
+Ñuble,San Nicolás
+Ñuble,Treguaco
+Ñuble,Yungay
+Biobío,Concepción
+Biobío,Coronel
+Biobío,Chiguayante
+Biobío,Florida
+Biobío,Hualqui
+Biobío,Lota
+Biobío,Penco
+Biobío,San Pedro de la Paz
+Biobío,Santa Juana
+Biobío,Talcahuano
+Biobío,Tomé
+Biobío,Hualpén
+Biobío,Lebu
+Biobío,Arauco
+Biobío,Cañete
+Biobío,Contulmo
+Biobío,Curanilahue
+Biobío,Los Álamos
+Biobío,Tirúa
+Biobío,Los Ángeles
+Biobío,Antuco
+Biobío,Cabrero
+Biobío,Laja
+Biobío,Mulchén
+Biobío,Nacimiento
+Biobío,Negrete
+Biobío,Quilaco
+Biobío,Quilleco
+Biobío,San Rosendo
+Biobío,Santa Bárbara
+Biobío,Tucapel
+Biobío,Yumbel
+Biobío,Alto Biobío
+Araucanía,Temuco
+Araucanía,Carahue
+Araucanía,Cunco
+Araucanía,Curarrehue
+Araucanía,Freire
+Araucanía,Galvarino
+Araucanía,Gorbea
+Araucanía,Lautaro
+Araucanía,Loncoche
+Araucanía,Melipeuco
+Araucanía,Nueva Imperial
+Araucanía,Padre Las Casas
+Araucanía,Perquenco
+Araucanía,Pitrufquén
+Araucanía,Pucón
+Araucanía,Saavedra
+Araucanía,Teodoro Schmidt
+Araucanía,Toltén
+Araucanía,Vilcún
+Araucanía,Villarrica
+Araucanía,Cholchol
+Araucanía,Angol
+Araucanía,Collipulli
+Araucanía,Curacautín
+Araucanía,Ercilla
+Araucanía,Lonquimay
+Araucanía,Los Sauces
+Araucanía,Lumaco
+Araucanía,Purén
+Araucanía,Renaico
+Araucanía,Traiguén
+Araucanía,Victoria
+Los Ríos,Valdivia
+Los Ríos,Corral
+Los Ríos,Lanco
+Los Ríos,Los Lagos
+Los Ríos,Máfil
+Los Ríos,Mariquina
+Los Ríos,Paillaco
+Los Ríos,Panguipulli
+Los Ríos,Futrono
+Los Ríos,La Unión
+Los Ríos,Lago Ranco
+Los Ríos,Río Bueno
+Los Lagos,Puerto Montt
+Los Lagos,Calbuco
+Los Lagos,Cochamó
+Los Lagos,Fresia
+Los Lagos,Frutillar
+Los Lagos,Los Muermos
+Los Lagos,Llanquihue
+Los Lagos,Maullín
+Los Lagos,Puerto Varas
+Los Lagos,Castro
+Los Lagos,Ancud
+Los Lagos,Chonchi
+Los Lagos,Curaco de Vélez
+Los Lagos,Dalcahue
+Los Lagos,Puqueldón
+Los Lagos,Queilén
+Los Lagos,Quellón
+Los Lagos,Quemchi
+Los Lagos,Quinchao
+Los Lagos,Osorno
+Los Lagos,Puerto Octay
+Los Lagos,Purranque
+Los Lagos,Puyehue
+Los Lagos,Río Negro
+Los Lagos,San Juan de la Costa
+Los Lagos,San Pablo
+Los Lagos,Chaitén
+Los Lagos,Futaleufú
+Los Lagos,Hualaihué
+Los Lagos,Palena
+Aysén,Coyhaique
+Aysén,Puerto Aysén
+Aysén,Cisnes
+Aysén,Guaitecas
+Aysén,Cochrane
+Aysén,O'Higgins
+Aysén,Tortel
+Aysén,Chile Chico
+Aysén,Río Ibáñez
+Magallanes,Punta Arenas
+Magallanes,Puerto Natales
+Magallanes,Porvenir
+Magallanes,Primavera
+Magallanes,Timaukel
+Magallanes,Cabo de Hornos
+Magallanes,Antártica
