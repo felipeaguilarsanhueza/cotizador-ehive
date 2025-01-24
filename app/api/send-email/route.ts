@@ -46,15 +46,14 @@ export async function POST(request: Request) {
       </ul>
     `;
 
-    // Preparamos adjuntos si hay archivo
-    let attachments = [];
+    let attachments: { filename: string; content: Buffer }[] = [];
+
     if (file) {
-      const base64Content = file.split(",")[1]; // parte después de "data:...base64,"
+      const base64Content = file.split(",")[1]; // Parte después de "data:...base64,"
       attachments = [
         {
-          filename: "boleta_luz.png", // o .jpg, .pdf, etc.
-          content: base64Content,
-          encoding: "base64",
+          filename: "attachment.pdf", // Cambiar el nombre según sea necesario
+          content: Buffer.from(base64Content, "base64"),
         },
       ];
     }
