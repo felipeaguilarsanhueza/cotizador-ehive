@@ -4,7 +4,7 @@ import React, { useState, useEffect } from "react";
 import { csv } from "d3-fetch";
 
 // Convierte un File en Base64 (string)
-const fileToBase64 = (file) => {
+const fileToBase64 = (file: Blob): Promise<string | ArrayBuffer | null> => {
   return new Promise((resolve, reject) => {
     const reader = new FileReader();
     reader.readAsDataURL(file); // Lee el archivo como Base64
@@ -14,7 +14,12 @@ const fileToBase64 = (file) => {
 };
 
 
-const sendEmail = async (data) => {
+
+const sendEmail = async (data: {
+    region: string; comuna: string; direccion: string; tablero: string; distancia: string; serviciosSeleccionados: never[]; selectedVehicle: string; selectedConnectors: never[]; // <-- El vehículo que seleccionaste
+    file: unknown; // <-- El archivo convertido a Base64
+    cliente: { nombre: string; telefono: string; correo: string; };
+  }) => {
   try {
     const response = await fetch("/api/send-email", {
       method: "POST",
@@ -49,7 +54,7 @@ export default function Page() {
   const [direccion, setDireccion] = useState("");
   const [instalacion, setInstalacion] = useState("");
   const [tablero, setTablero] = useState("");
-  const [file, setFile] = useState(null);
+  const [file, setFile] = useState<File | null>(null);
   const [distancia, setDistancia] = useState("");
   const [selectedServices, setSelectedServices] = useState([]);
   const [clientName, setClientName] = useState("");
@@ -61,6 +66,7 @@ export default function Page() {
   const [selectedConnectors, setSelectedConnectors] = useState([]);
   const [chargerOptions, setChargerOptions] = useState([]); // Lista cruda del CSV
   const [selectedChargerModel, setSelectedChargerModel] = useState(""); // Lo que elige el usuario
+
 
 
   useEffect(() => {
