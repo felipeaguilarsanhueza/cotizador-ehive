@@ -51,7 +51,6 @@ export default function Page() {
   const [tablero, setTablero] = useState("");
   const [file, setFile] = useState(null);
   const [distancia, setDistancia] = useState("");
-  const [gestionCarga, setGestionCarga] = useState("");
   const [selectedServices, setSelectedServices] = useState([]);
   const [clientName, setClientName] = useState("");
   const [clientPhone, setClientPhone] = useState("");
