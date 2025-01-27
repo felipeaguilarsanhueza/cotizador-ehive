@@ -16,10 +16,21 @@ const fileToBase64 = (file: Blob): Promise<string | ArrayBuffer | null> => {
 
 
 const sendEmail = async (data: {
-    region: string; comuna: string; direccion: string; tablero: string; distancia: string; serviciosSeleccionados: never[]; selectedVehicle: string; selectedConnectors: never[]; // <-- El vehículo que seleccionaste
-    file: unknown; // <-- El archivo convertido a Base64
-    cliente: { nombre: string; telefono: string; correo: string; };
-  }) => {
+  region: string;
+  comuna: string;
+  direccion: string;
+  tablero: string;
+  distancia: string;
+  serviciosSeleccionados: string[]; // Cambiado de never[] a string[]
+  selectedVehicle: string;
+  selectedConnectors: string[]; // Cambiado de never[] a string[]
+  file: string | ArrayBuffer | null; // Especificar que puede ser string o ArrayBuffer
+  cliente: {
+    nombre: string;
+    telefono: string;
+    correo: string;
+  };
+}) => {
   try {
     const response = await fetch("/api/send-email", {
       method: "POST",
