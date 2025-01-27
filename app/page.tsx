@@ -740,7 +740,7 @@ export default function Page() {
                 {/* Solo mostrar el texto dinámico en la tarjeta de Cargador */}
                 {isCargador ? (
                   <>
-                    Carga tu <b>{brand}</b> en {chargeTime} con nuestra solución
+                    Carga tu <b>{brand} en {chargeTime}</b> con nuestra solución
                     rápida y eficiente, diseñada pensando en la comodidad y el
                     estilo.
                   </>
