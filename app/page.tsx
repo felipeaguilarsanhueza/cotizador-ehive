@@ -98,6 +98,7 @@ export default function Page() {
   type Vehicle = {
     brand: string;
     model: string;
+    battery: string;
   };
 
 
@@ -629,8 +630,6 @@ export default function Page() {
 )}
 
 
-
-
 {step === 10 && (
   <div className="flex flex-col items-center mx-auto justify-center">
     <div className="grid grid-cols-1 xl:grid-cols-4 gap-6 m-8">
@@ -638,52 +637,82 @@ export default function Page() {
         {
           id: "cargador",
           label: "Cargador",
-          description: "Dispositivo de carga eficiente y rápido para vehículos eléctricos.",
-          // El precio lo mostraremos dinámico, así que puedes poner un placeholder o dejarlo vacío
+          description:
+            "Carga tu {brand} en {valor} con nuestra solución rápida y eficiente, diseñada pensando en la comodidad y el estilo.",
           price: null,
           image: "/images/cargador.png",
         },
         {
           id: "instalacion",
           label: "Instalación",
-          description: "Instalación segura y garantizada por expertos.",
+          description:
+            "Instalamos tus puntos de carga con seguridad y cumplimiento normativo. Garantizamos una solución confiable y a tu medida.",
           price: `$${calculatePrice()} + IVA`,
           image: "/images/instalacion.png",
         },
         {
           id: "gestion-carga",
           label: "Gestión de Carga",
-          description: "Sistema avanzado para administrar la carga de múltiples vehículos.",
+          description:
+            "Carga sin ampliar tu potencia contratada. El sistema monitorea el consumo y ajusta la velocidad para un rendimiento óptimo.",
           price: "$144.990 + IVA",
           image: "/images/gestioncarga.png",
         },
         {
           id: "gestion-pagos",
           label: "Gestión de Pagos",
-          description: "Sistema de pagos seguro y confiable para estaciones de carga.",
+          description:
+            "Ehive administra tus cargadores desde web y app móvil. Simplifica la operación y permite pagos seguros en pocos pasos.",
           price: "$180.000 + IVA",
           image: "/images/pagos.png",
         },
       ].map((service) => {
-        // Chequeamos si esta tarjeta es la de "cargador"
         const isCargador = service.id === "cargador";
 
-        // Filtramos el CSV según tu 'tablero' (monofasico/trifasico)
-        const filteredChargers = chargerOptions.filter(
-          (ch) => ch.tipo === tablero
-        );
-
-        // Si el usuario ya seleccionó algo en el <select>, obtenemos su precio
-        let selectedChargerPrice = "";
-        if (selectedChargerModel) {
-          // Buscamos el row en filteredChargers
-          const foundRow = filteredChargers.find(
-            (ch) => ch.cargador === selectedChargerModel
+        let filteredChargers: ChargerOption[] = [];
+        if (isCargador) {
+          filteredChargers = chargerOptions.filter(
+            (ch) => ch.tipo === tablero
           );
-          if (foundRow) {
-            selectedChargerPrice = foundRow.precio; // "999000" por ej.
-          }
         }
+
+        const calculateChargeTime = () => {
+          const vehicle = vehicles.find(
+            (v) =>
+              `${v.brand} ${v.model}` === selectedVehicle
+          );
+
+          if (!vehicle || !vehicle.battery || !tablero) return "N/A";
+
+          const batteryCapacity = parseFloat(vehicle.battery);
+          const chargeRate = tablero === "monofasico" ? 7 : 11;
+          const chargeTimeInHours = batteryCapacity / chargeRate;
+
+          const hours = Math.floor(chargeTimeInHours);
+          const minutes = Math.floor((chargeTimeInHours - hours) * 60);
+
+          if (minutes === 0) {
+            return (
+              <>
+                <b>{hours}</b> hora{hours !== 1 ? "s" : ""}
+              </>
+            );
+          }
+
+          return (
+            <>
+              <b>{hours}</b> hora{hours !== 1 ? "s" : ""} y{" "}
+              <b>{minutes}</b> minuto{minutes !== 1 ? "s" : ""}
+            </>
+          );
+        };
+
+        const chargeTime = isCargador ? calculateChargeTime() : null;
+
+        const vehicle = vehicles.find(
+          (v) => `${v.brand} ${v.model}` === selectedVehicle
+        );
+        const brand = vehicle ? vehicle.brand : "vehículo";
 
         return (
           <div
@@ -699,9 +728,12 @@ export default function Page() {
             </figure>
             <div className="flex flex-col p-8 h-full">
               <div className="text-3xl font-bold pb-6">{service.label}</div>
-              <div className="text-lg pb-4">{service.description}</div>
+              <div className="text-lg pb-4">
+                Carga tu <b>{brand}</b> en {chargeTime} con nuestra solución
+                rápida y eficiente, diseñada pensando en la comodidad y el
+                estilo.
+              </div>
 
-              {/* Si NO es "cargador", mostramos el price normal; si es "cargador", mostramos algo dinámico */}
               {!isCargador && (
                 <div className="text-xl font-semibold text-green-600 pb-4">
                   {service.price}
@@ -710,13 +742,14 @@ export default function Page() {
 
               {isCargador && (
                 <div className="mb-4">
-                  {/* SELECT para elegir el cargador compatible */}
                   <label className="block font-semibold mb-2">
                     Selecciona tu cargador:
                   </label>
                   <select
                     value={selectedChargerModel}
-                    onChange={(e) => setSelectedChargerModel(e.target.value)}
+                    onChange={(e) =>
+                      setSelectedChargerModel(e.target.value)
+                    }
                     className="px-2 py-1 border rounded-lg w-full"
                     disabled={filteredChargers.length === 0}
                   >
@@ -733,52 +766,31 @@ export default function Page() {
                     ))}
                   </select>
 
-                  {/* Mostramos el precio si hay una opción seleccionada */}
                   {selectedChargerModel && (
                     <p className="mt-2 text-green-700 font-bold">
                       Precio: $
-                      {parseInt(selectedChargerPrice, 10).toLocaleString(
-                        "es-CL"
-                      )} + IVA
+                      {parseInt(
+                        filteredChargers.find(
+                          (ch) => ch.cargador === selectedChargerModel
+                        )?.precio || "0",
+                        10
+                      ).toLocaleString("es-CL")}{" "}
+                      + IVA
                     </p>
                   )}
                 </div>
               )}
-
-              <div className="flex items-center mt-auto">
-                <input
-                  type="checkbox"
-                  id={service.id}
-                  className="mr-2"
-                  checked={selectedServices.includes(service.id)}
-                  onChange={(e) => {
-                    const newSelection = [...selectedServices];
-                    if (e.target.checked) {
-                      newSelection.push(service.id);
-                    } else {
-                      const index = newSelection.indexOf(service.id);
-                      if (index > -1) newSelection.splice(index, 1);
-                    }
-                    setSelectedServices(newSelection);
-                  }}
-                />
-                <label htmlFor={service.id} className="text-gray-800 font-semibold">
-                  Seleccionar
-                </label>
-              </div>
             </div>
           </div>
         );
       })}
     </div>
-
-    {/* Botón para avanzar de step 10 a step 11 */}
     <div className="mt-8">
       <button
         onClick={() => {
           console.log("Servicios seleccionados:", selectedServices);
           if (selectedServices.length > 0) {
-            setStep(11); // Avanzar al formulario final
+            setStep(11);
           }
         }}
         disabled={selectedServices.length === 0}
@@ -791,14 +803,13 @@ export default function Page() {
         Solicitar Cotización Formal
       </button>
     </div>
-
-      {/* Pie de página */}
-      <footer className="mt-12 text-center text-sm text-gray-500">
+    <footer className="mt-12 text-center text-sm text-gray-500">
       * Precio final sujeto a stock y a previa visita técnica en el lugar de la instalación.
     </footer>
   </div>
-
 )}
+
+
 
 
 
