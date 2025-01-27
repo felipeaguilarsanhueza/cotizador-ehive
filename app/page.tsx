@@ -60,19 +60,35 @@ export default function Page() {
   const [clientName, setClientName] = useState("");
   const [clientPhone, setClientPhone] = useState("");
   const [clientEmail, setClientEmail] = useState("");
-  const [vehicles, setVehicles] = useState([]);
+  const [vehicles, setVehicles] = useState<Vehicle[]>([]);
   const [selectedVehicle, setSelectedVehicle] = useState("");
-  const [precios, setPrecios] = useState([]);
+  const [precios, setPrecios] = useState<Price[]>([]);
   const [selectedConnectors, setSelectedConnectors] = useState([]);
-  const [chargerOptions, setChargerOptions] = useState([]); // Lista cruda del CSV
+  const [chargerOptions, setChargerOptions] = useState<ChargerOption[]>([]);
   const [selectedChargerModel, setSelectedChargerModel] = useState(""); // Lo que elige el usuario
 
+  type ChargerOption = {
+    tipo: string;
+    marca: string;
+    cargador: string;
+    precio: string;
+  };
+
+  type Price = {
+    distancia: number;
+    tablero: string;
+    precio: number;
+  };
+
+  type Vehicle = {
+    brand: string;
+    model: string;
+  };
 
 
   useEffect(() => {
     const loadChargers = async () => {
-      const dataCSV = await csv("/tables/chargers.csv");
-      // 'dataCSV' será un array de objetos {tipo, marca, cargador, precio}
+      const dataCSV = await csv("/tables/chargers.csv") as ChargerOption[];
       setChargerOptions(dataCSV);
     };
     loadChargers();
@@ -96,14 +112,15 @@ export default function Page() {
   }, [region, comuna, direccion, tablero, distancia, clientName, clientPhone, clientEmail]);
   
   useEffect(() => {
-    // Cargar los precios desde el CSV
     const loadPrices = async () => {
       const data = await csv("/tables/instalacionprecios.csv");
-      setPrecios(data.map((row) => ({
-        distancia: parseInt(row.distancia, 10),
-        tablero: row.tablero,
-        precio: parseInt(row.precio, 10),
-      })));
+      setPrecios(
+        data.map((row) => ({
+          distancia: parseInt(row.distancia, 10),
+          tablero: row.tablero,
+          precio: parseInt(row.precio, 10),
+        }))
+      );
     };
     loadPrices();
   }, []);
@@ -184,7 +201,7 @@ export default function Page() {
 
   useEffect(() => {
     const loadVehicles = async () => {
-      const data = await csv("/tables/VehicleModels.csv");
+      const data = await csv("/tables/VehicleModels.csv") as Vehicle[];
       setVehicles(data);
     };
     loadVehicles();
