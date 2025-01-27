@@ -50,22 +50,26 @@ export default function Page() {
   const [step, setStep] = useState(1);
   const [region, setRegion] = useState("");
   const [comuna, setComuna] = useState("");
-  const [regionesComunas, setRegionesComunas] = useState({});
+  const [regionesComunas, setRegionesComunas] = useState<RegionesComunas>({});
   const [direccion, setDireccion] = useState("");
   const [instalacion, setInstalacion] = useState("");
   const [tablero, setTablero] = useState("");
   const [file, setFile] = useState<File | null>(null);
   const [distancia, setDistancia] = useState("");
-  const [selectedServices, setSelectedServices] = useState([]);
+  const [selectedServices, setSelectedServices] = useState<string[]>([]);
   const [clientName, setClientName] = useState("");
   const [clientPhone, setClientPhone] = useState("");
   const [clientEmail, setClientEmail] = useState("");
   const [vehicles, setVehicles] = useState<Vehicle[]>([]);
   const [selectedVehicle, setSelectedVehicle] = useState("");
   const [precios, setPrecios] = useState<Price[]>([]);
-  const [selectedConnectors, setSelectedConnectors] = useState([]);
+  const [selectedConnectors, setSelectedConnectors] = useState<string[]>([]);
   const [chargerOptions, setChargerOptions] = useState<ChargerOption[]>([]);
   const [selectedChargerModel, setSelectedChargerModel] = useState(""); // Lo que elige el usuario
+
+  type RegionesComunas = {
+    [region: string]: string[];
+  };  
 
   type ChargerOption = {
     tipo: string;
@@ -128,8 +132,8 @@ export default function Page() {
   useEffect(() => {
     const loadRegionesComunas = async () => {
       const data = await csv("/tables/regiones_comunas.csv");
-      const regionesData = {};
-      data.forEach((row) => {
+      const regionesData: RegionesComunas = {}; // Especifica el tipo aquí
+      data.forEach((row: any) => {
         const { region, comuna } = row;
         if (!regionesData[region]) {
           regionesData[region] = [];
@@ -138,9 +142,9 @@ export default function Page() {
       });
       setRegionesComunas(regionesData);
     };
-
+  
     loadRegionesComunas();
-  }, []);
+  }, []);  
 
   const finalizar = async () => {
     let fileBase64 = null;
@@ -194,8 +198,10 @@ export default function Page() {
   };
   
 
-  const handleFileUpload = (event) => {
-    setFile(event.target.files[0]);
+  const handleFileUpload = (event: React.ChangeEvent<HTMLInputElement>) => {
+    if (event.target.files && event.target.files[0]) {
+      setFile(event.target.files[0]);
+    }
   };
   
 
