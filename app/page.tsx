@@ -637,8 +637,7 @@ export default function Page() {
         {
           id: "cargador",
           label: "Cargador",
-          description:
-            "Carga tu {brand} en {valor} con nuestra solución rápida y eficiente, diseñada pensando en la comodidad y el estilo.",
+          description: "",
           price: null,
           image: "/images/cargador.png",
         },
@@ -691,6 +690,15 @@ export default function Page() {
           const hours = Math.floor(chargeTimeInHours);
           const minutes = Math.floor((chargeTimeInHours - hours) * 60);
 
+          // Lógica ajustada para mostrar solo minutos si las horas son 0
+          if (hours === 0) {
+            return (
+              <>
+                <b>{minutes}</b> minuto{minutes !== 1 ? "s" : ""}
+              </>
+            );
+          }
+
           if (minutes === 0) {
             return (
               <>
@@ -729,9 +737,16 @@ export default function Page() {
             <div className="flex flex-col p-8 h-full">
               <div className="text-3xl font-bold pb-6">{service.label}</div>
               <div className="text-lg pb-4">
-                Carga tu <b>{brand}</b> en {chargeTime} con nuestra solución
-                rápida y eficiente, diseñada pensando en la comodidad y el
-                estilo.
+                {/* Solo mostrar el texto dinámico en la tarjeta de Cargador */}
+                {isCargador ? (
+                  <>
+                    Carga tu <b>{brand}</b> en {chargeTime} con nuestra solución
+                    rápida y eficiente, diseñada pensando en la comodidad y el
+                    estilo.
+                  </>
+                ) : (
+                  service.description
+                )}
               </div>
 
               {!isCargador && (
@@ -780,6 +795,32 @@ export default function Page() {
                   )}
                 </div>
               )}
+
+              {/* Checkbox para seleccionar el servicio */}
+              <div className="flex items-center mt-auto">
+                <input
+                  type="checkbox"
+                  id={service.id}
+                  className="mr-2"
+                  checked={selectedServices.includes(service.id)}
+                  onChange={(e) => {
+                    const newSelection = [...selectedServices];
+                    if (e.target.checked) {
+                      newSelection.push(service.id);
+                    } else {
+                      const index = newSelection.indexOf(service.id);
+                      if (index > -1) newSelection.splice(index, 1);
+                    }
+                    setSelectedServices(newSelection);
+                  }}
+                />
+                <label
+                  htmlFor={service.id}
+                  className="text-gray-800 font-semibold"
+                >
+                  Seleccionar
+                </label>
+              </div>
             </div>
           </div>
         );
@@ -808,7 +849,6 @@ export default function Page() {
     </footer>
   </div>
 )}
-
 
 
 
