@@ -791,7 +791,13 @@ export default function Page() {
         Solicitar Cotización Formal
       </button>
     </div>
+
+      {/* Pie de página */}
+      <footer className="mt-12 text-center text-sm text-gray-500">
+      * Precio final sujeto a stock y a previa visita técnica en el lugar de la instalación.
+    </footer>
   </div>
+
 )}
 
 
