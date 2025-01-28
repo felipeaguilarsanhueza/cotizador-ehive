@@ -76,7 +76,8 @@ export default function Page() {
   const [precios, setPrecios] = useState<Price[]>([]);
   const [selectedConnectors, setSelectedConnectors] = useState<string[]>([]);
   const [chargerOptions, setChargerOptions] = useState<ChargerOption[]>([]);
-  const [selectedChargerModel, setSelectedChargerModel] = useState(""); // Lo que elige el usuario
+  const [selectedChargerModel, setSelectedChargerModel] = useState("");
+  const [alertVisible, setAlertVisible] = useState(false);
 
   type RegionesComunas = {
     [region: string]: string[];
@@ -158,14 +159,13 @@ export default function Page() {
     loadRegionesComunas();
   }, []);  
 
+
   const finalizar = async () => {
     let fileBase64 = null;
     if (file) {
-      // Esperamos la conversión asíncrona a Base64
       fileBase64 = await fileToBase64(file);
     }
-
-    // Asegúrate de incluir 'selectedVehicle' y el Base64 del archivo
+  
     const data = {
       region,
       comuna,
@@ -174,24 +174,38 @@ export default function Page() {
       distancia,
       serviciosSeleccionados: selectedServices,
       selectedVehicle,
-      selectedConnectors,     // <-- El vehículo que seleccionaste
-      file: fileBase64,     // <-- El archivo convertido a Base64
+      selectedConnectors,
+      file: fileBase64,
       cliente: {
         nombre: clientName,
         telefono: clientPhone,
         correo: clientEmail,
       },
     };
-
-    console.log("Datos enviados:", data);
-
-    // Llamada a la función que hace el fetch
-    await sendEmail(data);
-    
-    alert("Datos enviados correctamente");
-  };
-
   
+    console.log("Datos enviados:", data);
+  
+    // Muestra la alerta inmediatamente
+    setAlertVisible(true);
+  
+    // Realiza la llamada a la API en segundo plano
+    try {
+      await sendEmail(data);
+      console.log("Email sent successfully");
+    } catch (error) {
+      console.error("Error sending email:", error);
+      // Si hay un error, puedes mostrar otra alerta indicando el problema
+      alert("Hubo un error al enviar los datos. Por favor, inténtalo de nuevo.");
+      setAlertVisible(false); // Oculta la alerta de éxito si hay un error
+      return; // Detiene la redirección
+    }
+  
+    // Redirige tras 3 segundos
+    setTimeout(() => {
+      setAlertVisible(false);
+      window.location.href = "https://ehive.cc"; // Redirección
+    }, 5000);
+  };
 
   
   const calculatePrice = () => {
@@ -224,11 +238,41 @@ export default function Page() {
     };
     loadVehicles();
   }, []);
+  
 
   return (
-    <main className="flex flex-col items-center justify-center min-h-screen p-4 bg-gray-lightest">
-      {/* Paso 1 */}
-      {step === 1 && (
+    <>
+      {/* Alerta */}
+      {alertVisible && (
+  <div className="fixed inset-0 flex justify-center items-center z-50 bg-black bg-opacity-50">
+    <div className="bg-green-dark text-white rounded-lg w-[600px] h-40 flex flex-col justify-center items-center p-6 shadow-lg">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        className="lucide lucide-check-circle mb-4"
+        width="50"
+        height="50"
+      >
+        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+        <path d="m9 11 3 3L22 4"></path>
+      </svg>
+      <div className="text-center">
+        <h2 className="font-bold text-xl mb-2">¡Datos enviados correctamente!</h2>
+        <p className="text-lg">Redirigiendo a eHive...</p>
+      </div>
+    </div>
+  </div>
+)}
+
+  
+      {/* Contenido principal */}
+      <main className="flex flex-col items-center justify-center min-h-screen p-4 bg-gray-lightest">
+        {step === 1 && (
         <div className="w-full max-w-md text-center">
           <h1 className="text-2xl font-bold mb-4 text-gray-colddark">¿Cuál es tu región?</h1>
           <label htmlFor="region" className="sr-only">Región</label>
@@ -901,5 +945,5 @@ export default function Page() {
         </div>
       )}
     </main>
-  );
-}
+    </>
+)};
